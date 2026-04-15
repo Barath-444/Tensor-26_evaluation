@@ -1,0 +1,231 @@
+{
+  "teamsStore": {
+    "tensor-26-hackathon-team-002": {
+      "id": "tensor-26-hackathon-team-002",
+      "name": "TEAM-002",
+      "track": "Industry",
+      "members": [
+        "KS-KARTHIK-05"
+      ],
+      "repoName": "tensor-26-hackathon-team-002",
+      "repoUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-002",
+      "compareUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-002/compare/4e799dc...main",
+      "liveUrl": "",
+      "phase1Commit": true,
+      "phase1Hash": "4e799dc",
+      "commitsAfterPhase1": 5,
+      "totalCommits": 6,
+      "secA": "",
+      "secB": "",
+      "secC": "",
+      "notes": "",
+      "addedAt": "2026-04-14T09:13:01.632Z",
+      "syncedAt": "2026-04-15T05:25:52.203Z",
+      "phase1Time": "2026-04-13T08:10:20Z",
+      "lastCommit": {
+        "sha": "b765b58821ef0adb47467f49f835dc11ebfbb10f",
+        "shortSha": "b765b58",
+        "message": "Add Simple_python.py",
+        "author": "KSKARTHIK",
+        "date": "2026-04-14T09:05:37Z",
+        "url": "https://github.com/TENSOR-26/tensor-26-hackathon-team-002/commit/b765b58821ef0adb47467f49f835dc11ebfbb10f"
+      }
+    },
+    "tensor-26-hackathon-team-001": {
+      "id": "tensor-26-hackathon-team-001",
+      "name": "TEAM-001",
+      "track": "Industry",
+      "members": [
+        "IEEE-Student-Branch-SRMIST-Trichy"
+      ],
+      "repoName": "tensor-26-hackathon-team-001",
+      "repoUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-001",
+      "compareUrl": "",
+      "liveUrl": "",
+      "phase1Commit": false,
+      "phase1Hash": null,
+      "commitsAfterPhase1": 0,
+      "totalCommits": 0,
+      "secA": "",
+      "secB": "",
+      "secC": "",
+      "notes": "",
+      "addedAt": "2026-04-15T05:28:05.156Z",
+      "syncedAt": null
+    }
+  },
+  "eventLog": [
+    {
+      "ts": "11:59:02 am",
+      "fullTs": "2026-04-15T06:29:02.470Z",
+      "msg": "Server started on port 3001",
+      "type": "system"
+    },
+    {
+      "ts": "10:58:05 am",
+      "fullTs": "2026-04-15T05:28:05.156Z",
+      "msg": "Auto-imported 1 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "10:58:04 am",
+      "fullTs": "2026-04-15T05:28:04.438Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "10:58:02 am",
+      "fullTs": "2026-04-15T05:28:02.436Z",
+      "msg": "Team removed: TEAM-001",
+      "type": "warn"
+    },
+    {
+      "ts": "10:57:24 am",
+      "fullTs": "2026-04-15T05:27:24.227Z",
+      "msg": "Excel exported: 2 teams",
+      "type": "export"
+    },
+    {
+      "ts": "10:55:52 am",
+      "fullTs": "2026-04-15T05:25:52.519Z",
+      "msg": "Bulk sync complete for 2 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "10:55:49 am",
+      "fullTs": "2026-04-15T05:25:49.683Z",
+      "msg": "Starting bulk sync for 2 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "10:55:32 am",
+      "fullTs": "2026-04-15T05:25:32.583Z",
+      "msg": "Phase changed to: Phase 2",
+      "type": "system"
+    },
+    {
+      "ts": "10:49:56 am",
+      "fullTs": "2026-04-15T05:19:56.230Z",
+      "msg": "Phase changed to: Phase 1",
+      "type": "system"
+    },
+    {
+      "ts": "10:49:50 am",
+      "fullTs": "2026-04-15T05:19:50.955Z",
+      "msg": "Phase changed to: Inauguration",
+      "type": "system"
+    },
+    {
+      "ts": "10:47:36 am",
+      "fullTs": "2026-04-15T05:17:36.774Z",
+      "msg": "Server started on port 3001",
+      "type": "system"
+    },
+    {
+      "ts": "02:51:46 pm",
+      "fullTs": "2026-04-14T09:21:46.657Z",
+      "msg": "Excel exported: 2 teams",
+      "type": "export"
+    },
+    {
+      "ts": "02:49:45 pm",
+      "fullTs": "2026-04-14T09:19:45.532Z",
+      "msg": "Bulk sync complete for 2 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "02:49:41 pm",
+      "fullTs": "2026-04-14T09:19:41.851Z",
+      "msg": "Starting bulk sync for 2 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "02:47:47 pm",
+      "fullTs": "2026-04-14T09:17:47.450Z",
+      "msg": "Server started on port 3001",
+      "type": "system"
+    },
+    {
+      "ts": "02:47:09 pm",
+      "fullTs": "2026-04-14T09:17:09.957Z",
+      "msg": "Server started on port 3001",
+      "type": "system"
+    },
+    {
+      "ts": "02:43:37 pm",
+      "fullTs": "2026-04-14T09:13:37.600Z",
+      "msg": "Bulk sync complete for 2 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "02:43:34 pm",
+      "fullTs": "2026-04-14T09:13:34.285Z",
+      "msg": "Starting bulk sync for 2 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "02:43:01 pm",
+      "fullTs": "2026-04-14T09:13:01.632Z",
+      "msg": "Auto-imported 2 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "02:43:00 pm",
+      "fullTs": "2026-04-14T09:13:00.167Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "02:42:53 pm",
+      "fullTs": "2026-04-14T09:12:53.203Z",
+      "msg": "Phase changed to: Phase 1",
+      "type": "system"
+    },
+    {
+      "ts": "02:42:22 pm",
+      "fullTs": "2026-04-14T09:12:22.238Z",
+      "msg": "Server started on port 3001",
+      "type": "system"
+    }
+  ],
+  "activePhase": "Phase 2",
+  "phaseStartTime": "2026-04-15T05:25:32.582Z",
+  "phaseDurations": {
+    "Inauguration": 60,
+    "Phase 1": 180,
+    "Lunch": 60,
+    "Phase 2": 300,
+    "Checkpoint 1": 90,
+    "Phase 3": 420,
+    "Dinner": 60,
+    "Phase 4": 180,
+    "Phase 5": 90,
+    "Final Pitch": 120
+  },
+  "phaseLabels": {
+    "Inauguration": "Inauguration",
+    "Phase 1": "Phase 1 — AI Generation",
+    "Lunch": "Lunch Break",
+    "Phase 2": "Phase 2 — Co-Curation",
+    "Checkpoint 1": "Checkpoint 1 Evaluation",
+    "Phase 3": "Phase 3 — Integration",
+    "Dinner": "Dinner Break",
+    "Phase 4": "Phase 4 — Deployment",
+    "Phase 5": "Phase 5 — Documentation",
+    "Final Pitch": "Final Pitch"
+  },
+  "sectionMeta": {
+    "secA": {
+      "label": "Section A — Prompt Architecture",
+      "max": 30
+    },
+    "secB": {
+      "label": "Section B — Human Finetuning",
+      "max": 30
+    },
+    "secC": {
+      "label": "Section C — Final Product",
+      "max": 40
+    }
+  }
+}
