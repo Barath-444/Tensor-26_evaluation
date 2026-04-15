@@ -101,9 +101,9 @@ router.post('/sync-team', async (req, res) => {
       c.message.toLowerCase().includes(phase1Msg.toLowerCase())
     );
     
-    // If no explicit marker, but we have commits, use the oldest one as the base
+    // Real-Time P1 Logic: If no explicit marker, use the LATEST commit as the milestone
     if (!phase1Commit && allCommits.length > 0) {
-      phase1Commit = allCommits[allCommits.length - 1]; // Oldest is last in rev-chron list
+      phase1Commit = allCommits[0]; // Most recent commit
     }
 
     // Count commits after Phase 1
@@ -111,14 +111,13 @@ router.post('/sync-team', async (req, res) => {
     let phase1Hash = null;
     let phase1Confirmed = false;
     
-    if (phase1Commit) {
+    // Absolute Real-Time Logic: Always use the LATEST commit as the milestone to ensure freshest data.
+    // This bypasses any markers that might be stuck in template repo history.
+    if (allCommits.length > 0) {
+      phase1Commit = allCommits[0];
       phase1Hash = phase1Commit.shortSha;
-      const phase1Index = allCommits.findIndex(c => c.sha === phase1Commit.sha);
-      commitsAfterPhase1 = phase1Index; // commits before it in reverse-chron list
-      
-      // Only mark as "Confirmed YES" if we have work AFTER the base OR it has the specific message
-      // This prevents a repo with ONLY 1 commit from showing "YES/1"
-      phase1Confirmed = (allCommits.length > 1 || phase1Commit.message.toLowerCase().includes(phase1Msg.toLowerCase()));
+      commitsAfterPhase1 = 0; // In real-time mode, current work IS the milestone
+      phase1Confirmed = true;
     }
 
     // Get README for live URL
@@ -187,10 +186,9 @@ router.post('/sync-all', async (req, res) => {
         const phase1Msg = process.env.PHASE1_COMMIT_MESSAGE || 'feat: Initial AI Generation';
         const { data: commits } = await GH().get(`/repos/${org}/${team.repoName}/commits`, { params: { per_page: 100 } });
         const allCommits = commits.map(c => ({ sha: c.sha, shortSha: c.sha.substring(0, 7), message: c.commit.message, author: c.commit.author.name, date: c.commit.author.date, url: c.html_url }));
-        let phase1Commit = allCommits.find(c => c.message.toLowerCase().includes(phase1Msg.toLowerCase()));
-        if (!phase1Commit && allCommits.length > 0) phase1Commit = allCommits[allCommits.length - 1];
-        const phase1Index = phase1Commit ? allCommits.findIndex(c => c.sha === phase1Commit.sha) : -1;
-        const phase1Confirmed = phase1Commit && (allCommits.length > 1 || phase1Commit.message.toLowerCase().includes(phase1Msg.toLowerCase()));
+        let phase1Commit = allCommits[0] || null;
+        const phase1Confirmed = allCommits.length > 0;
+        const phase1Index = 0;
         
         let liveUrl = team.liveUrl || '';
         try {

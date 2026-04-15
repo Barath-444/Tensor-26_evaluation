@@ -2,7 +2,12 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const API = axios.create({ baseURL: '/api' });
+const API = axios.create({ 
+  baseURL: '/api',
+  headers: {
+    'ngrok-skip-browser-warning': 'true'
+  }
+});
 
 const TRACKS = ['Industry', 'Societal', 'R&D'];
 
@@ -55,20 +60,22 @@ function ScoreInput({ value, max, onChange }) {
 }
 
 const PHASES = [
-  { id: 'Inauguration', label: 'Inauguration', duration: 60, color: '#378ADD' },
-  { id: 'Phase 1', label: 'Phase 1 — AI Generation', duration: 180, color: '#E24B4A' },
-  { id: 'Lunch', label: 'Lunch Break', duration: 60, color: '#BA7517' },
-  { id: 'Phase 2', label: 'Phase 2 — Co-Curation', duration: 300, color: '#D85A30' },
-  { id: 'Checkpoint 1', label: 'Checkpoint 1 Evaluation', duration: 90, color: '#1D9E75' },
-  { id: 'Phase 3', label: 'Phase 3 — Integration', duration: 420, color: '#534AB7' },
-  { id: 'Dinner', label: 'Dinner Break', duration: 60, color: '#BA7517' },
-  { id: 'Phase 4', label: 'Phase 4 — Deployment', duration: 180, color: '#185FA5' },
-  { id: 'Phase 5', label: 'Phase 5 — Documentation', duration: 90, color: '#0F6E56' },
-  { id: 'Final Pitch', label: 'Final Pitch', duration: 120, color: '#1D9E75' }
+  { id: 'Inauguration', label: 'Inauguration', duration: 60, color: '#c0c0c0' },
+  { id: 'Phase 1', label: 'Phase 1 — AI Generation', duration: 180, color: '#d4af37' },
+  { id: 'Lunch', label: 'Lunch Break', duration: 60, color: '#8b7355' },
+  { id: 'Phase 2', label: 'Phase 2 — Co-Curation', duration: 300, color: '#d4af37' },
+  { id: 'Checkpoint 1', label: 'Checkpoint 1 Evaluation', duration: 90, color: '#e5e4e2' },
+  { id: 'Phase 3', label: 'Phase 3 — Integration', duration: 420, color: '#d4af37' },
+  { id: 'Dinner', label: 'Dinner Break', duration: 60, color: '#8b7355' },
+  { id: 'Phase 4', label: 'Phase 4 — Deployment', duration: 180, color: '#d4af37' },
+  { id: 'Phase 5', label: 'Phase 5 — Documentation', duration: 90, color: '#d4af37' },
+  { id: 'Final Pitch', label: 'Final Pitch', duration: 120, color: '#e5e4e2' }
 ];
 
 function LiveClock({ activePhase, phaseStartTime, durations, labels }) {
   const [now, setNow] = useState(new Date());
+  const alarmPlayedRef = useRef(null);
+
   useEffect(() => {
     const t = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(t);
@@ -76,10 +83,24 @@ function LiveClock({ activePhase, phaseStartTime, durations, labels }) {
 
   const phase = PHASES.find(p => p.id === activePhase) || PHASES[0];
   const label = (labels && labels[activePhase]) || phase.label;
-  const duration = (durations && durations[activePhase]) || phase.duration;
-  const elapsedMins = Math.floor((now - new Date(phaseStartTime)) / 60000);
-  const remainingMins = Math.max(0, duration - elapsedMins);
-  const remainingSecs = Math.max(0, 60 - now.getSeconds());
+  const durationInMins = (durations && durations[activePhase]) || phase.duration;
+  
+  const startTime = new Date(phaseStartTime);
+  // Calculate total seconds remaining as a single integer
+  const totalRemainingSecs = Math.max(0, (durationInMins * 60) - Math.floor((now - startTime) / 1000));
+  
+  const remainingMins = Math.floor(totalRemainingSecs / 60);
+  const remainingSecs = totalRemainingSecs % 60;
+
+  // Trigger alarm at 0:00 exactly once
+  useEffect(() => {
+    if (totalRemainingSecs === 0 && activePhase !== alarmPlayedRef.current) {
+      const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3');
+      audio.volume = 1.0;
+      audio.play().catch(e => console.log('Audio playback prevented by browser:', e));
+      alarmPlayedRef.current = activePhase;
+    }
+  }, [totalRemainingSecs, activePhase]);
 
   return (
     <div className="live-clock">
@@ -346,7 +367,9 @@ export default function App() {
           <button className="menu-toggle" onClick={() => setShowSidebar(true)}>
             <div className="bar" /> <div className="bar" /> <div className="bar" />
           </button>
-          <div className="logo">T26</div>
+          <div className="logo">
+            <img src="/logo.png" alt="TENSOR Logo" />
+          </div>
           <div className="header-titles">
             <h1>TENSOR-26 — Evaluation System</h1>
             <p>TENSOR-26 · tensor-26-hackathon · Classroom ID: 319897</p>
