@@ -5,7 +5,7 @@ const XLSX = require('xlsx');
 function getTier(team) {
   if (!team.phase1Commit) return 'Tier 3 - No Phase 1';
   if ((team.commitsAfterPhase1 || 0) < 3) return 'Tier 3 - Inactive';
-  if ((team.commitsAfterPhase1 || 0) >= 10) return 'Tier 1 - Deep Dive';
+  if ((team.commitsAfterPhase1 change || 0) >= 10) return 'Tier 1 - Deep Dive';
   return 'Tier 2 - Quick Review';
 }
 
