@@ -12,6 +12,19 @@ function calcTotal(team) {
   return (parseFloat(team.secA) || 0) + (parseFloat(team.secB) || 0) + (parseFloat(team.secC) || 0);
 }
 
+function parseGitHubUrl(url) {
+  if (!url) return { owner: null, repo: null };
+  const clean = url.trim()
+    .replace(/https?:\/\/(www\.)?github\.com\//i, '')
+    .replace(/\.git$/i, '')
+    .replace(/git@github\.com[:/]/i, ''); // Handle both SSH and HTTPS
+  const parts = clean.split('/').filter(Boolean);
+  if (parts.length >= 2) {
+    return { owner: parts[parts.length - 2], repo: parts[parts.length - 1] };
+  }
+  return { owner: null, repo: parts[0] || null };
+}
+
 // GET all teams
 router.get('/', (req, res) => {
   const teams = Object.values(global.teamsStore).map(t => ({
@@ -27,17 +40,21 @@ router.post('/', (req, res) => {
   const { name, track, members, repoName, liveUrl, hash, commitsAfterPhase1 } = req.body;
   if (!name) return res.status(400).json({ error: 'Team name required' });
 
-  const org = process.env.GITHUB_ORG || 'tensor26-srmiist';
-  const id = repoName || name.toLowerCase().replace(/\s+/g, '-');
+  const defaultOrg = process.env.GITHUB_ORG || 'tensor26-srmiist';
+  const { owner, repo } = parseGitHubUrl(repoName);
+  const finalOwner = owner || defaultOrg;
+  const finalRepo = repo || '';
+  const id = finalRepo || name.toLowerCase().replace(/\s+/g, '-');
 
   const team = {
     id,
     name,
     track: track || 'Industry',
     members: Array.isArray(members) ? members : (members || '').split(',').map(s => s.trim()).filter(Boolean),
-    repoName: repoName || '',
-    repoUrl: repoName ? `https://github.com/${org}/${repoName}` : '',
-    compareUrl: (repoName && hash) ? `https://github.com/${org}/${repoName}/compare/${hash}...main` : '',
+    repoOwner: finalOwner,
+    repoName: finalRepo,
+    repoUrl: finalRepo ? `https://github.com/${finalOwner}/${finalRepo}` : '',
+    compareUrl: (finalRepo && hash) ? `https://github.com/${finalOwner}/${finalRepo}/compare/${hash}...main` : '',
     liveUrl: liveUrl || '',
     phase1Commit: !!hash,
     phase1Hash: hash || null,
@@ -64,19 +81,24 @@ router.post('/bulk', (req, res) => {
   const { teams } = req.body;
   if (!Array.isArray(teams)) return res.status(400).json({ error: 'teams array required' });
 
-  const org = process.env.GITHUB_ORG || 'tensor26-srmiist';
+  const defaultOrg = process.env.GITHUB_ORG || 'tensor26-srmiist';
   let added = 0;
 
   teams.forEach(t => {
     if (!t.name) return;
-    const id = t.repoName || t.name.toLowerCase().replace(/\s+/g, '-');
+    const { owner, repo } = parseGitHubUrl(t.repoName || t.githubUrl);
+    const finalOwner = owner || defaultOrg;
+    const finalRepo = repo || '';
+    const id = finalRepo || t.name.toLowerCase().replace(/\s+/g, '-');
+    
     global.teamsStore[id] = {
       id,
       name: t.name,
       track: t.track || 'Industry',
-      members: Array.isArray(t.members) ? t.members : (t.members || '').split(',').map(s => s.trim()).filter(Boolean),
-      repoName: t.repoName || '',
-      repoUrl: t.repoName ? `https://github.com/${org}/${t.repoName}` : '',
+      members: Array.isArray(t.members) ? t.members : (t.members || '').split(/[;,]/).map(s => s.trim()).filter(Boolean),
+      repoOwner: finalOwner,
+      repoName: finalRepo,
+      repoUrl: finalRepo ? `https://github.com/${finalOwner}/${finalRepo}` : '',
       compareUrl: '',
       liveUrl: t.liveUrl || '',
       phase1Commit: false,

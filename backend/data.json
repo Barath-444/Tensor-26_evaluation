@@ -1,745 +1,1621 @@
 {
-  "teamsStore": {
-    "tensor-26-hackathon-team-001": {
-      "id": "tensor-26-hackathon-team-001",
-      "name": "TEAM-001",
-      "track": "Industry",
-      "members": [
-        "IEEE-Student-Branch-SRMIST-Trichy",
-        "SubbuVasanth"
-      ],
-      "repoName": "tensor-26-hackathon-team-001",
-      "repoUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-001",
-      "compareUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-001/compare/4e799dc...main",
-      "liveUrl": "",
-      "phase1Commit": true,
-      "phase1Hash": "4e799dc",
-      "commitsAfterPhase1": 2,
-      "totalCommits": 3,
-      "secA": "",
-      "secB": "",
-      "secC": "",
-      "notes": "",
-      "addedAt": "2026-04-15T10:18:26.817Z",
-      "syncedAt": "2026-04-15T11:23:40.669Z",
-      "phase1Time": "2026-04-13T08:10:20Z",
-      "lastCommit": {
-        "sha": "0b898cad82da53787fb486f402a4f359781b78f7",
-        "shortSha": "0b898ca",
-        "message": "test commit",
-        "author": "SubbuVasanth",
-        "date": "2026-04-15T10:36:45Z",
-        "url": "https://github.com/TENSOR-26/tensor-26-hackathon-team-001/commit/0b898cad82da53787fb486f402a4f359781b78f7"
-      }
-    },
-    "tensor-26-hackathon-team-002": {
-      "id": "tensor-26-hackathon-team-002",
-      "name": "TEAM-002",
-      "track": "Industry",
-      "members": [
-        "KS-KARTHIK-05"
-      ],
-      "repoName": "tensor-26-hackathon-team-002",
-      "repoUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-002",
-      "compareUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-team-002/compare/4e799dc...main",
-      "liveUrl": "",
-      "phase1Commit": true,
-      "phase1Hash": "4e799dc",
-      "commitsAfterPhase1": 5,
-      "totalCommits": 6,
-      "secA": "",
-      "secB": "",
-      "secC": "",
-      "notes": "",
-      "addedAt": "2026-04-15T10:18:26.817Z",
-      "syncedAt": "2026-04-15T11:23:41.802Z",
-      "phase1Time": "2026-04-13T08:10:20Z",
-      "lastCommit": {
-        "sha": "b765b58821ef0adb47467f49f835dc11ebfbb10f",
-        "shortSha": "b765b58",
-        "message": "Add Simple_python.py",
-        "author": "KSKARTHIK",
-        "date": "2026-04-14T09:05:37Z",
-        "url": "https://github.com/TENSOR-26/tensor-26-hackathon-team-002/commit/b765b58821ef0adb47467f49f835dc11ebfbb10f"
-      }
-    },
-    "tensor-26-hackathon-lambda": {
-      "id": "tensor-26-hackathon-lambda",
-      "name": "LAMBDA",
-      "track": "Industry",
-      "members": [
-        "subvas17204-boop"
-      ],
-      "repoName": "tensor-26-hackathon-lambda",
-      "repoUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-lambda",
-      "compareUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-lambda/compare/4e799dc...main",
-      "liveUrl": "",
-      "phase1Commit": true,
-      "phase1Hash": "4e799dc",
-      "commitsAfterPhase1": 5,
-      "totalCommits": 6,
-      "secA": 30,
-      "secB": 28,
-      "secC": 33,
-      "notes": "",
-      "addedAt": "2026-04-15T10:45:26.849Z",
-      "syncedAt": "2026-04-15T11:23:42.999Z",
-      "phase1Time": "2026-04-13T08:10:20Z",
-      "lastCommit": {
-        "sha": "72742d85d5ac534665e09e9e46d073608e5831d3",
-        "shortSha": "72742d8",
-        "message": "Add new div",
-        "author": "subvas17204-boop",
-        "date": "2026-04-15T11:23:32Z",
-        "url": "https://github.com/TENSOR-26/tensor-26-hackathon-lambda/commit/72742d85d5ac534665e09e9e46d073608e5831d3"
-      }
-    },
-    "tensor-26-hackathon-super-subbu": {
-      "id": "tensor-26-hackathon-super-subbu",
-      "name": "SUPER-SUBBU",
-      "track": "Industry",
-      "members": [
-        "Barath-444"
-      ],
-      "repoName": "tensor-26-hackathon-super-subbu",
-      "repoUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-super-subbu",
-      "compareUrl": "https://github.com/TENSOR-26/tensor-26-hackathon-super-subbu/compare/4e799dc...main",
-      "liveUrl": "",
-      "phase1Commit": true,
-      "phase1Hash": "4e799dc",
-      "commitsAfterPhase1": 2,
-      "totalCommits": 3,
-      "secA": "",
-      "secB": "",
-      "secC": "",
-      "notes": "",
-      "addedAt": "2026-04-15T11:18:18.195Z",
-      "syncedAt": "2026-04-15T11:23:44.104Z",
-      "phase1Time": "2026-04-13T08:10:20Z",
-      "lastCommit": {
-        "sha": "dce071bdd32f79e639ca98288bcd36d22128be45",
-        "shortSha": "dce071b",
-        "message": "Update index.html",
-        "author": "Barath-444",
-        "date": "2026-04-15T11:18:08Z",
-        "url": "https://github.com/TENSOR-26/tensor-26-hackathon-super-subbu/commit/dce071bdd32f79e639ca98288bcd36d22128be45"
-      }
-    }
-  },
+  "teamsStore": {},
   "eventLog": [
     {
-      "ts": "04:53:44 pm",
-      "fullTs": "2026-04-15T11:23:44.414Z",
+      "ts": "04:50:24 pm",
+      "fullTs": "2026-04-16T11:20:24.793Z",
+      "msg": "Team removed: wfewg",
+      "type": "warn"
+    },
+    {
+      "ts": "04:50:22 pm",
+      "fullTs": "2026-04-16T11:20:22.826Z",
+      "msg": "Team removed: TR-153",
+      "type": "warn"
+    },
+    {
+      "ts": "04:50:20 pm",
+      "fullTs": "2026-04-16T11:20:20.788Z",
+      "msg": "Team removed: TR-150 - Aegis",
+      "type": "warn"
+    },
+    {
+      "ts": "04:50:17 pm",
+      "fullTs": "2026-04-16T11:20:17.472Z",
+      "msg": "Team removed: Team STARK",
+      "type": "warn"
+    },
+    {
+      "ts": "04:50:01 pm",
+      "fullTs": "2026-04-16T11:20:01.655Z",
       "msg": "Bulk sync complete for 4 teams",
       "type": "sync"
     },
     {
-      "ts": "04:53:39 pm",
-      "fullTs": "2026-04-15T11:23:39.660Z",
+      "ts": "04:50:01 pm",
+      "fullTs": "2026-04-16T11:20:01.346Z",
+      "msg": "Synced: wfewg | Commits: 1",
+      "type": "sync"
+    },
+    {
+      "ts": "04:50:00 pm",
+      "fullTs": "2026-04-16T11:20:00.489Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:50:00 pm",
+      "fullTs": "2026-04-16T11:20:00.136Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:49:59 pm",
+      "fullTs": "2026-04-16T11:19:59.821Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:49:59 pm",
+      "fullTs": "2026-04-16T11:19:59.538Z",
       "msg": "Starting bulk sync for 4 teams",
       "type": "sync"
     },
     {
-      "ts": "04:48:25 pm",
-      "fullTs": "2026-04-15T11:18:25.571Z",
+      "ts": "04:49:58 pm",
+      "fullTs": "2026-04-16T11:19:58.838Z",
       "msg": "Bulk sync complete for 4 teams",
       "type": "sync"
     },
     {
-      "ts": "04:48:20 pm",
-      "fullTs": "2026-04-15T11:18:20.981Z",
+      "ts": "04:49:58 pm",
+      "fullTs": "2026-04-16T11:19:58.525Z",
+      "msg": "Synced: wfewg | Commits: 1",
+      "type": "sync"
+    },
+    {
+      "ts": "04:49:57 pm",
+      "fullTs": "2026-04-16T11:19:57.655Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:49:57 pm",
+      "fullTs": "2026-04-16T11:19:57.352Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:49:57 pm",
+      "fullTs": "2026-04-16T11:19:57.069Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:49:56 pm",
+      "fullTs": "2026-04-16T11:19:56.649Z",
       "msg": "Starting bulk sync for 4 teams",
       "type": "sync"
     },
     {
-      "ts": "04:48:18 pm",
-      "fullTs": "2026-04-15T11:18:18.195Z",
-      "msg": "Auto-imported 1 teams from Classroom",
+      "ts": "04:49:47 pm",
+      "fullTs": "2026-04-16T11:19:47.790Z",
+      "msg": "Bulk imported 4 teams",
       "type": "add"
     },
     {
-      "ts": "04:48:17 pm",
-      "fullTs": "2026-04-15T11:18:17.174Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
-    },
-    {
-      "ts": "04:43:33 pm",
-      "fullTs": "2026-04-15T11:13:33.172Z",
+      "ts": "04:48:19 pm",
+      "fullTs": "2026-04-16T11:18:19.086Z",
       "msg": "Bulk sync complete for 3 teams",
       "type": "sync"
     },
     {
-      "ts": "04:43:29 pm",
-      "fullTs": "2026-04-15T11:13:29.617Z",
+      "ts": "04:48:19 pm",
+      "fullTs": "2026-04-16T11:18:19.081Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:48:18 pm",
+      "fullTs": "2026-04-16T11:18:18.737Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:48:18 pm",
+      "fullTs": "2026-04-16T11:18:18.411Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:48:18 pm",
+      "fullTs": "2026-04-16T11:18:18.097Z",
       "msg": "Starting bulk sync for 3 teams",
       "type": "sync"
     },
     {
-      "ts": "04:43:19 pm",
-      "fullTs": "2026-04-15T11:13:19.919Z",
-      "msg": "Phase changed to: Phase 1",
-      "type": "system"
+      "ts": "04:48:15 pm",
+      "fullTs": "2026-04-16T11:18:15.191Z",
+      "msg": "Sync error for Naveen: Not Found",
+      "type": "error"
     },
     {
-      "ts": "04:41:59 pm",
-      "fullTs": "2026-04-15T11:11:59.687Z",
+      "ts": "04:48:03 pm",
+      "fullTs": "2026-04-16T11:18:03.598Z",
       "msg": "Bulk sync complete for 3 teams",
       "type": "sync"
     },
     {
-      "ts": "04:41:56 pm",
-      "fullTs": "2026-04-15T11:11:56.376Z",
+      "ts": "04:48:03 pm",
+      "fullTs": "2026-04-16T11:18:03.595Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:48:03 pm",
+      "fullTs": "2026-04-16T11:18:03.252Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:48:02 pm",
+      "fullTs": "2026-04-16T11:18:02.937Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:48:02 pm",
+      "fullTs": "2026-04-16T11:18:02.484Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:44:23 pm",
+      "fullTs": "2026-04-16T11:14:23.796Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:44:23 pm",
+      "fullTs": "2026-04-16T11:14:23.793Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:44:23 pm",
+      "fullTs": "2026-04-16T11:14:23.483Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:44:23 pm",
+      "fullTs": "2026-04-16T11:14:23.188Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:44:22 pm",
+      "fullTs": "2026-04-16T11:14:22.828Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:43:58 pm",
+      "fullTs": "2026-04-16T11:13:58.272Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:43:58 pm",
+      "fullTs": "2026-04-16T11:13:58.268Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:43:57 pm",
+      "fullTs": "2026-04-16T11:13:57.986Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:43:57 pm",
+      "fullTs": "2026-04-16T11:13:57.683Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:43:57 pm",
+      "fullTs": "2026-04-16T11:13:57.283Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:42:58 pm",
+      "fullTs": "2026-04-16T11:12:58.840Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:42:58 pm",
+      "fullTs": "2026-04-16T11:12:58.838Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:58 pm",
+      "fullTs": "2026-04-16T11:12:58.539Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:58 pm",
+      "fullTs": "2026-04-16T11:12:58.256Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:57 pm",
+      "fullTs": "2026-04-16T11:12:57.884Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:42:10 pm",
+      "fullTs": "2026-04-16T11:12:10.803Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:42:10 pm",
+      "fullTs": "2026-04-16T11:12:10.801Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:10 pm",
+      "fullTs": "2026-04-16T11:12:10.513Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:10 pm",
+      "fullTs": "2026-04-16T11:12:10.186Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:09 pm",
+      "fullTs": "2026-04-16T11:12:09.801Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:42:01 pm",
+      "fullTs": "2026-04-16T11:12:01.977Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "04:42:01 pm",
+      "fullTs": "2026-04-16T11:12:01.974Z",
+      "msg": "Sync failed for MANIKANDAN [TENSOR-26/MANIKANDAN]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:01 pm",
+      "fullTs": "2026-04-16T11:12:01.675Z",
+      "msg": "Sync failed for Naveen [TENSOR-26/Naveen]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:01 pm",
+      "fullTs": "2026-04-16T11:12:01.387Z",
+      "msg": "Sync failed for safna [TENSOR-26/safna]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:42:00 pm",
+      "fullTs": "2026-04-16T11:12:00.968Z",
       "msg": "Starting bulk sync for 3 teams",
       "type": "sync"
     },
     {
       "ts": "04:41:54 pm",
-      "fullTs": "2026-04-15T11:11:54.163Z",
-      "msg": "Auto-imported 0 teams from Classroom",
+      "fullTs": "2026-04-16T11:11:54.654Z",
+      "msg": "Bulk imported 3 teams",
       "type": "add"
     },
     {
-      "ts": "04:41:53 pm",
-      "fullTs": "2026-04-15T11:11:53.229Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
+      "ts": "04:24:16 pm",
+      "fullTs": "2026-04-16T10:54:16.543Z",
+      "msg": "Team removed: test 1",
+      "type": "warn"
     },
     {
-      "ts": "04:41:49 pm",
-      "fullTs": "2026-04-15T11:11:49.707Z",
-      "msg": "Bulk sync complete for 3 teams",
+      "ts": "04:24:13 pm",
+      "fullTs": "2026-04-16T10:54:13.493Z",
+      "msg": "Team removed: test",
+      "type": "warn"
+    },
+    {
+      "ts": "04:24:11 pm",
+      "fullTs": "2026-04-16T10:54:11.342Z",
+      "msg": "Team removed: NOT-SUS",
+      "type": "warn"
+    },
+    {
+      "ts": "04:24:08 pm",
+      "fullTs": "2026-04-16T10:54:08.850Z",
+      "msg": "Team removed: GLITCH-GANG",
+      "type": "warn"
+    },
+    {
+      "ts": "04:22:49 pm",
+      "fullTs": "2026-04-16T10:52:49.151Z",
+      "msg": "Bulk sync complete for 4 teams",
       "type": "sync"
     },
     {
-      "ts": "04:41:45 pm",
-      "fullTs": "2026-04-15T11:11:45.279Z",
-      "msg": "Starting bulk sync for 3 teams",
+      "ts": "04:22:48 pm",
+      "fullTs": "2026-04-16T10:52:48.844Z",
+      "msg": "Synced: test 1 | Commits: 5",
       "type": "sync"
     },
     {
-      "ts": "04:41:04 pm",
-      "fullTs": "2026-04-15T11:11:04.915Z",
-      "msg": "Bulk sync complete for 3 teams",
+      "ts": "04:22:47 pm",
+      "fullTs": "2026-04-16T10:52:47.715Z",
+      "msg": "Synced: test | Commits: 2",
       "type": "sync"
     },
     {
-      "ts": "04:41:01 pm",
-      "fullTs": "2026-04-15T11:11:01.490Z",
-      "msg": "Starting bulk sync for 3 teams",
+      "ts": "04:22:46 pm",
+      "fullTs": "2026-04-16T10:52:46.741Z",
+      "msg": "Sync failed for not-sus-project [himeshkashyap007/not-sus-project]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "04:22:46 pm",
+      "fullTs": "2026-04-16T10:52:46.117Z",
+      "msg": "Synced: GLITCH-GANG | Commits: 17",
       "type": "sync"
     },
     {
-      "ts": "04:40:54 pm",
-      "fullTs": "2026-04-15T11:10:54.561Z",
-      "msg": "Bulk sync complete for 3 teams",
+      "ts": "04:22:44 pm",
+      "fullTs": "2026-04-16T10:52:44.905Z",
+      "msg": "Starting bulk sync for 4 teams",
       "type": "sync"
     },
     {
-      "ts": "04:40:51 pm",
-      "fullTs": "2026-04-15T11:10:51.152Z",
-      "msg": "Starting bulk sync for 3 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:37:02 pm",
-      "fullTs": "2026-04-15T11:07:02.776Z",
-      "msg": "Score updated: LAMBDA → A:30 B:28 C:33 Total:91",
-      "type": "score"
-    },
-    {
-      "ts": "04:37:01 pm",
-      "fullTs": "2026-04-15T11:07:01.605Z",
-      "msg": "Score updated: LAMBDA → A:30 B:28 C:3 Total:61",
-      "type": "score"
-    },
-    {
-      "ts": "04:36:53 pm",
-      "fullTs": "2026-04-15T11:06:53.249Z",
-      "msg": "Score updated: LAMBDA → A:30 B:28 C: Total:58",
-      "type": "score"
-    },
-    {
-      "ts": "04:36:52 pm",
-      "fullTs": "2026-04-15T11:06:52.609Z",
-      "msg": "Score updated: LAMBDA → A:30 B:2 C: Total:32",
-      "type": "score"
-    },
-    {
-      "ts": "04:36:47 pm",
-      "fullTs": "2026-04-15T11:06:47.455Z",
-      "msg": "Score updated: LAMBDA → A:30 B: C: Total:30",
-      "type": "score"
-    },
-    {
-      "ts": "04:36:46 pm",
-      "fullTs": "2026-04-15T11:06:46.434Z",
-      "msg": "Score updated: LAMBDA → A:3 B: C: Total:3",
-      "type": "score"
-    },
-    {
-      "ts": "04:36:17 pm",
-      "fullTs": "2026-04-15T11:06:17.044Z",
-      "msg": "Phase changed to: Inauguration",
-      "type": "system"
-    },
-    {
-      "ts": "04:36:06 pm",
-      "fullTs": "2026-04-15T11:06:06.713Z",
-      "msg": "Phase changed to: Phase 4",
-      "type": "system"
-    },
-    {
-      "ts": "04:36:06 pm",
-      "fullTs": "2026-04-15T11:06:06.494Z",
-      "msg": "Phase changed to: Phase 4",
-      "type": "system"
-    },
-    {
-      "ts": "04:36:04 pm",
-      "fullTs": "2026-04-15T11:06:04.890Z",
-      "msg": "Phase changed to: Phase 4",
-      "type": "system"
-    },
-    {
-      "ts": "04:36:03 pm",
-      "fullTs": "2026-04-15T11:06:03.120Z",
-      "msg": "Phase changed to: Phase 4",
-      "type": "system"
-    },
-    {
-      "ts": "04:36:01 pm",
-      "fullTs": "2026-04-15T11:06:01.172Z",
-      "msg": "Phase changed to: Phase 4",
-      "type": "system"
-    },
-    {
-      "ts": "04:35:42 pm",
-      "fullTs": "2026-04-15T11:05:42.602Z",
-      "msg": "Phase changed to: Phase 4",
-      "type": "system"
-    },
-    {
-      "ts": "04:34:48 pm",
-      "fullTs": "2026-04-15T11:04:48.759Z",
-      "msg": "Phase changed to: Lunch",
-      "type": "system"
-    },
-    {
-      "ts": "04:34:45 pm",
-      "fullTs": "2026-04-15T11:04:45.846Z",
-      "msg": "Phase changed to: Lunch",
-      "type": "system"
-    },
-    {
-      "ts": "04:34:41 pm",
-      "fullTs": "2026-04-15T11:04:41.062Z",
-      "msg": "Phase changed to: Phase 2",
-      "type": "system"
-    },
-    {
-      "ts": "04:34:38 pm",
-      "fullTs": "2026-04-15T11:04:38.861Z",
-      "msg": "Phase changed to: Lunch",
-      "type": "system"
-    },
-    {
-      "ts": "04:32:59 pm",
-      "fullTs": "2026-04-15T11:02:59.450Z",
-      "msg": "Bulk sync complete for 3 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:32:56 pm",
-      "fullTs": "2026-04-15T11:02:56.018Z",
-      "msg": "Starting bulk sync for 3 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:32:45 pm",
-      "fullTs": "2026-04-15T11:02:45.939Z",
-      "msg": "Auto-imported 0 teams from Classroom",
+      "ts": "04:22:18 pm",
+      "fullTs": "2026-04-16T10:52:18.019Z",
+      "msg": "Bulk imported 2 teams",
       "type": "add"
     },
     {
-      "ts": "04:32:45 pm",
-      "fullTs": "2026-04-15T11:02:45.001Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
-    },
-    {
-      "ts": "04:31:20 pm",
-      "fullTs": "2026-04-15T11:01:20.450Z",
-      "msg": "Auto-imported 0 teams from Classroom",
-      "type": "add"
-    },
-    {
-      "ts": "04:31:19 pm",
-      "fullTs": "2026-04-15T11:01:19.515Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
-    },
-    {
-      "ts": "04:31:09 pm",
-      "fullTs": "2026-04-15T11:01:09.886Z",
-      "msg": "Phase changed to: Lunch",
+      "ts": "04:21:37 pm",
+      "fullTs": "2026-04-16T10:51:37.457Z",
+      "msg": "Server started on port 3001",
       "type": "system"
     },
     {
-      "ts": "04:31:05 pm",
-      "fullTs": "2026-04-15T11:01:05.018Z",
-      "msg": "Phase changed to: Phase 1",
+      "ts": "03:56:39 pm",
+      "fullTs": "2026-04-16T10:26:39.289Z",
+      "msg": "Excel exported: 4 teams",
+      "type": "export"
+    },
+    {
+      "ts": "03:55:42 pm",
+      "fullTs": "2026-04-16T10:25:42.632Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:55:42 pm",
+      "fullTs": "2026-04-16T10:25:42.319Z",
+      "msg": "Synced: Barath Team | Commits: 5",
+      "type": "sync"
+    },
+    {
+      "ts": "03:55:41 pm",
+      "fullTs": "2026-04-16T10:25:41.184Z",
+      "msg": "Synced: Disease Detection | Commits: 2",
+      "type": "sync"
+    },
+    {
+      "ts": "03:55:40 pm",
+      "fullTs": "2026-04-16T10:25:40.294Z",
+      "msg": "Sync failed for not-sus-project [himeshkashyap007/not-sus-project]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "03:55:39 pm",
+      "fullTs": "2026-04-16T10:25:39.642Z",
+      "msg": "Synced: GLITCH-GANG | Commits: 17",
+      "type": "sync"
+    },
+    {
+      "ts": "03:55:38 pm",
+      "fullTs": "2026-04-16T10:25:38.613Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:54:35 pm",
+      "fullTs": "2026-04-16T10:24:35.229Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:54:34 pm",
+      "fullTs": "2026-04-16T10:24:34.915Z",
+      "msg": "Synced: Barath Team | Commits: 5",
+      "type": "sync"
+    },
+    {
+      "ts": "03:54:33 pm",
+      "fullTs": "2026-04-16T10:24:33.688Z",
+      "msg": "Synced: Disease Detection | Commits: 2",
+      "type": "sync"
+    },
+    {
+      "ts": "03:54:32 pm",
+      "fullTs": "2026-04-16T10:24:32.765Z",
+      "msg": "Sync failed for not-sus-project [himeshkashyap007/not-sus-project]: Not Found",
+      "type": "error"
+    },
+    {
+      "ts": "03:54:32 pm",
+      "fullTs": "2026-04-16T10:24:32.126Z",
+      "msg": "Synced: GLITCH-GANG | Commits: 17",
+      "type": "sync"
+    },
+    {
+      "ts": "03:54:31 pm",
+      "fullTs": "2026-04-16T10:24:31.059Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:51:26 pm",
+      "fullTs": "2026-04-16T10:21:26.492Z",
+      "msg": "Server started on port 3001",
       "type": "system"
     },
     {
-      "ts": "04:31:04 pm",
-      "fullTs": "2026-04-15T11:01:04.510Z",
-      "msg": "Phase changed to: Phase 1",
-      "type": "system"
-    },
-    {
-      "ts": "04:31:00 pm",
-      "fullTs": "2026-04-15T11:01:00.465Z",
-      "msg": "Phase changed to: Lunch",
-      "type": "system"
-    },
-    {
-      "ts": "04:30:59 pm",
-      "fullTs": "2026-04-15T11:00:59.739Z",
-      "msg": "Phase changed to: Lunch",
-      "type": "system"
-    },
-    {
-      "ts": "04:28:36 pm",
-      "fullTs": "2026-04-15T10:58:36.231Z",
-      "msg": "Bulk sync complete for 3 teams",
+      "ts": "03:47:57 pm",
+      "fullTs": "2026-04-16T10:17:57.121Z",
+      "msg": "Starting bulk sync for 4 teams",
       "type": "sync"
-    },
-    {
-      "ts": "04:28:32 pm",
-      "fullTs": "2026-04-15T10:58:32.627Z",
-      "msg": "Starting bulk sync for 3 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:20:09 pm",
-      "fullTs": "2026-04-15T10:50:09.944Z",
-      "msg": "Phase changed to: Lunch",
-      "type": "system"
-    },
-    {
-      "ts": "04:15:57 pm",
-      "fullTs": "2026-04-15T10:45:57.530Z",
-      "msg": "Bulk sync complete for 3 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:15:54 pm",
-      "fullTs": "2026-04-15T10:45:54.005Z",
-      "msg": "Starting bulk sync for 3 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:15:26 pm",
-      "fullTs": "2026-04-15T10:45:26.850Z",
-      "msg": "Auto-imported 1 teams from Classroom",
-      "type": "add"
-    },
-    {
-      "ts": "04:15:26 pm",
-      "fullTs": "2026-04-15T10:45:26.004Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
-    },
-    {
-      "ts": "04:08:53 pm",
-      "fullTs": "2026-04-15T10:38:53.849Z",
-      "msg": "Phase changed to: Phase 1",
-      "type": "system"
-    },
-    {
-      "ts": "04:06:58 pm",
-      "fullTs": "2026-04-15T10:36:58.979Z",
-      "msg": "Bulk sync complete for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:06:56 pm",
-      "fullTs": "2026-04-15T10:36:56.506Z",
-      "msg": "Starting bulk sync for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "04:02:18 pm",
-      "fullTs": "2026-04-15T10:32:18.355Z",
-      "msg": "Auto-imported 0 teams from Classroom",
-      "type": "add"
-    },
-    {
-      "ts": "04:02:17 pm",
-      "fullTs": "2026-04-15T10:32:17.599Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
-    },
-    {
-      "ts": "03:55:54 pm",
-      "fullTs": "2026-04-15T10:25:54.427Z",
-      "msg": "Bulk sync complete for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "03:55:51 pm",
-      "fullTs": "2026-04-15T10:25:51.710Z",
-      "msg": "Starting bulk sync for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "03:48:26 pm",
-      "fullTs": "2026-04-15T10:18:26.817Z",
-      "msg": "Auto-imported 2 teams from Classroom",
-      "type": "add"
-    },
-    {
-      "ts": "03:48:26 pm",
-      "fullTs": "2026-04-15T10:18:26.027Z",
-      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
-      "type": "github"
     },
     {
       "ts": "03:46:50 pm",
-      "fullTs": "2026-04-15T10:16:50.248Z",
+      "fullTs": "2026-04-16T10:16:50.607Z",
       "msg": "Server started on port 3001",
       "type": "system"
     },
     {
-      "ts": "03:26:36 pm",
-      "fullTs": "2026-04-15T09:56:36.743Z",
+      "ts": "03:42:19 pm",
+      "fullTs": "2026-04-16T10:12:19.099Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:41:50 pm",
+      "fullTs": "2026-04-16T10:11:50.662Z",
       "msg": "Server started on port 3001",
       "type": "system"
     },
     {
-      "ts": "03:08:59 pm",
-      "fullTs": "2026-04-15T09:38:59.188Z",
-      "msg": "Team removed: TEAM-002",
+      "ts": "03:37:50 pm",
+      "fullTs": "2026-04-16T10:07:50.946Z",
+      "msg": "Server started on port 3001",
+      "type": "system"
+    },
+    {
+      "ts": "03:34:13 pm",
+      "fullTs": "2026-04-16T10:04:13.216Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:34:13 pm",
+      "fullTs": "2026-04-16T10:04:13.214Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:34:12 pm",
+      "fullTs": "2026-04-16T10:04:12.924Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:34:12 pm",
+      "fullTs": "2026-04-16T10:04:12.603Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:34:12 pm",
+      "fullTs": "2026-04-16T10:04:12.277Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:34:11 pm",
+      "fullTs": "2026-04-16T10:04:11.954Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:33:32 pm",
+      "fullTs": "2026-04-16T10:03:32.469Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:33:32 pm",
+      "fullTs": "2026-04-16T10:03:32.467Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:32 pm",
+      "fullTs": "2026-04-16T10:03:32.146Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:31 pm",
+      "fullTs": "2026-04-16T10:03:31.824Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:31 pm",
+      "fullTs": "2026-04-16T10:03:31.501Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:31 pm",
+      "fullTs": "2026-04-16T10:03:31.178Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:33:24 pm",
+      "fullTs": "2026-04-16T10:03:24.652Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:33:24 pm",
+      "fullTs": "2026-04-16T10:03:24.650Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:24 pm",
+      "fullTs": "2026-04-16T10:03:24.322Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:23 pm",
+      "fullTs": "2026-04-16T10:03:23.991Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:23 pm",
+      "fullTs": "2026-04-16T10:03:23.656Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:33:23 pm",
+      "fullTs": "2026-04-16T10:03:23.266Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:29:34 pm",
+      "fullTs": "2026-04-16T09:59:34.594Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:29:34 pm",
+      "fullTs": "2026-04-16T09:59:34.590Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:34 pm",
+      "fullTs": "2026-04-16T09:59:34.266Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:33 pm",
+      "fullTs": "2026-04-16T09:59:33.948Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:33 pm",
+      "fullTs": "2026-04-16T09:59:33.635Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:33 pm",
+      "fullTs": "2026-04-16T09:59:33.293Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:29:26 pm",
+      "fullTs": "2026-04-16T09:59:26.584Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:29:26 pm",
+      "fullTs": "2026-04-16T09:59:26.582Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:26 pm",
+      "fullTs": "2026-04-16T09:59:26.263Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:25 pm",
+      "fullTs": "2026-04-16T09:59:25.936Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:25 pm",
+      "fullTs": "2026-04-16T09:59:25.587Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:29:25 pm",
+      "fullTs": "2026-04-16T09:59:25.239Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:26:46 pm",
+      "fullTs": "2026-04-16T09:56:46.724Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:26:46 pm",
+      "fullTs": "2026-04-16T09:56:46.722Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:46 pm",
+      "fullTs": "2026-04-16T09:56:46.410Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:46 pm",
+      "fullTs": "2026-04-16T09:56:46.086Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:45 pm",
+      "fullTs": "2026-04-16T09:56:45.755Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:45 pm",
+      "fullTs": "2026-04-16T09:56:45.398Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:26:20 pm",
+      "fullTs": "2026-04-16T09:56:20.336Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:26:20 pm",
+      "fullTs": "2026-04-16T09:56:20.334Z",
+      "msg": "Sync failed for https://github.com/Barath-444/Tensor-26_evaluation: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:19 pm",
+      "fullTs": "2026-04-16T09:56:19.998Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:19 pm",
+      "fullTs": "2026-04-16T09:56:19.689Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:19 pm",
+      "fullTs": "2026-04-16T09:56:19.359Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:26:18 pm",
+      "fullTs": "2026-04-16T09:56:18.988Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:25:21 pm",
+      "fullTs": "2026-04-16T09:55:21.598Z",
+      "msg": "Bulk imported 1 teams",
+      "type": "add"
+    },
+    {
+      "ts": "03:24:08 pm",
+      "fullTs": "2026-04-16T09:54:08.527Z",
+      "msg": "Team removed: barath",
       "type": "warn"
     },
     {
-      "ts": "03:08:57 pm",
-      "fullTs": "2026-04-15T09:38:57.111Z",
-      "msg": "Team removed: TEAM-001",
+      "ts": "03:23:47 pm",
+      "fullTs": "2026-04-16T09:53:47.508Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:23:47 pm",
+      "fullTs": "2026-04-16T09:53:47.506Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:23:47 pm",
+      "fullTs": "2026-04-16T09:53:47.196Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:23:46 pm",
+      "fullTs": "2026-04-16T09:53:46.851Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:23:46 pm",
+      "fullTs": "2026-04-16T09:53:46.447Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:17:23 pm",
+      "fullTs": "2026-04-16T09:47:23.514Z",
+      "msg": "Bulk sync complete for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:17:23 pm",
+      "fullTs": "2026-04-16T09:47:23.513Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:17:23 pm",
+      "fullTs": "2026-04-16T09:47:23.163Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:17:22 pm",
+      "fullTs": "2026-04-16T09:47:22.858Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:17:22 pm",
+      "fullTs": "2026-04-16T09:47:22.491Z",
+      "msg": "Starting bulk sync for 4 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:16:34 pm",
+      "fullTs": "2026-04-16T09:46:34.971Z",
+      "msg": "Bulk imported 1 teams",
+      "type": "add"
+    },
+    {
+      "ts": "03:14:05 pm",
+      "fullTs": "2026-04-16T09:44:05.766Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:14:05 pm",
+      "fullTs": "2026-04-16T09:44:05.764Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:14:05 pm",
+      "fullTs": "2026-04-16T09:44:05.447Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:14:05 pm",
+      "fullTs": "2026-04-16T09:44:05.108Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:14:04 pm",
+      "fullTs": "2026-04-16T09:44:04.703Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:12:39 pm",
+      "fullTs": "2026-04-16T09:42:39.292Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:12:39 pm",
+      "fullTs": "2026-04-16T09:42:39.291Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:12:38 pm",
+      "fullTs": "2026-04-16T09:42:38.974Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:12:38 pm",
+      "fullTs": "2026-04-16T09:42:38.649Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:12:38 pm",
+      "fullTs": "2026-04-16T09:42:38.292Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:10:47 pm",
+      "fullTs": "2026-04-16T09:40:47.935Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:10:47 pm",
+      "fullTs": "2026-04-16T09:40:47.933Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:10:47 pm",
+      "fullTs": "2026-04-16T09:40:47.596Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:10:47 pm",
+      "fullTs": "2026-04-16T09:40:47.277Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:10:46 pm",
+      "fullTs": "2026-04-16T09:40:46.886Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:10:38 pm",
+      "fullTs": "2026-04-16T09:40:38.177Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:10:38 pm",
+      "fullTs": "2026-04-16T09:40:38.176Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:10:37 pm",
+      "fullTs": "2026-04-16T09:40:37.869Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:10:37 pm",
+      "fullTs": "2026-04-16T09:40:37.516Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:10:37 pm",
+      "fullTs": "2026-04-16T09:40:37.181Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:09:46 pm",
+      "fullTs": "2026-04-16T09:39:46.760Z",
+      "msg": "Bulk sync complete for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:09:46 pm",
+      "fullTs": "2026-04-16T09:39:46.758Z",
+      "msg": "Sync failed for https://github.com/SubbuVasanth/disease-spread-detection: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:09:46 pm",
+      "fullTs": "2026-04-16T09:39:46.443Z",
+      "msg": "Sync failed for https://github.com/himeshkashyap007/not-sus-project: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:09:45 pm",
+      "fullTs": "2026-04-16T09:39:45.911Z",
+      "msg": "Sync failed for https://github.com/TENSOR-26/tensor-26-hackathon-glitch-gang: Request failed with status code 404",
+      "type": "error"
+    },
+    {
+      "ts": "03:09:45 pm",
+      "fullTs": "2026-04-16T09:39:45.529Z",
+      "msg": "Starting bulk sync for 3 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "03:09:17 pm",
+      "fullTs": "2026-04-16T09:39:17.568Z",
+      "msg": "Bulk imported 1 teams",
+      "type": "add"
+    },
+    {
+      "ts": "03:06:53 pm",
+      "fullTs": "2026-04-16T09:36:53.713Z",
+      "msg": "Bulk imported 1 teams",
+      "type": "add"
+    },
+    {
+      "ts": "03:06:34 pm",
+      "fullTs": "2026-04-16T09:36:34.773Z",
+      "msg": "Bulk imported 1 teams",
+      "type": "add"
+    },
+    {
+      "ts": "03:01:31 pm",
+      "fullTs": "2026-04-16T09:31:31.438Z",
+      "msg": "Excel exported: 0 teams",
+      "type": "export"
+    },
+    {
+      "ts": "03:01:23 pm",
+      "fullTs": "2026-04-16T09:31:23.521Z",
+      "msg": "Team removed: TR-28",
       "type": "warn"
     },
     {
-      "ts": "02:57:41 pm",
-      "fullTs": "2026-04-15T09:27:41.113Z",
-      "msg": "Score updated: TEAM-002 → A:10 B:5 C:30 Total:45",
+      "ts": "03:01:20 pm",
+      "fullTs": "2026-04-16T09:31:20.936Z",
+      "msg": "Team removed: TR-178-THE-BUG-FACTORY",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:19 pm",
+      "fullTs": "2026-04-16T09:31:19.238Z",
+      "msg": "Team removed: TR-167-BLITZ-CODERS",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:17 pm",
+      "fullTs": "2026-04-16T09:31:17.306Z",
+      "msg": "Team removed: TR-152-HACKORBIT-1",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:15 pm",
+      "fullTs": "2026-04-16T09:31:15.300Z",
+      "msg": "Team removed: TR-146-OLYMPUS",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:13 pm",
+      "fullTs": "2026-04-16T09:31:13.391Z",
+      "msg": "Team removed: TR-132-BYTE_BRAINS-1",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:11 pm",
+      "fullTs": "2026-04-16T09:31:11.024Z",
+      "msg": "Team removed: TR-126-ELITE-FOUR",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:08 pm",
+      "fullTs": "2026-04-16T09:31:08.300Z",
+      "msg": "Team removed: TR-122-SYNTAX_SQUAD",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:06 pm",
+      "fullTs": "2026-04-16T09:31:06.639Z",
+      "msg": "Team removed: TR-118-APEX-SQUAD",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:04 pm",
+      "fullTs": "2026-04-16T09:31:04.623Z",
+      "msg": "Team removed: TR-113-CODE-CATALYSTS",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:02 pm",
+      "fullTs": "2026-04-16T09:31:02.787Z",
+      "msg": "Team removed: TR-104-DARKLEAD",
+      "type": "warn"
+    },
+    {
+      "ts": "03:01:01 pm",
+      "fullTs": "2026-04-16T09:31:01.021Z",
+      "msg": "Team removed: TR-099-AASHIKA-SHAFRIN-S",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:59 pm",
+      "fullTs": "2026-04-16T09:30:59.091Z",
+      "msg": "Team removed: TR-092-LYCARDII",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:57 pm",
+      "fullTs": "2026-04-16T09:30:57.235Z",
+      "msg": "Team removed: TR-091-LINKING-LIONS",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:55 pm",
+      "fullTs": "2026-04-16T09:30:55.202Z",
+      "msg": "Team removed: TR-078-CODESTROM",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:53 pm",
+      "fullTs": "2026-04-16T09:30:53.085Z",
+      "msg": "Team removed: TR-065-THE-ELITE",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:50 pm",
+      "fullTs": "2026-04-16T09:30:50.763Z",
+      "msg": "Team removed: TR-063-ZENCODEX",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:48 pm",
+      "fullTs": "2026-04-16T09:30:48.184Z",
+      "msg": "Team removed: TR-050-CODE-CRUSHERS",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:46 pm",
+      "fullTs": "2026-04-16T09:30:46.073Z",
+      "msg": "Team removed: TR-045-SILLYVOIDS",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:44 pm",
+      "fullTs": "2026-04-16T09:30:44.176Z",
+      "msg": "Team removed: TR-036-LOGIC-LOOM",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:41 pm",
+      "fullTs": "2026-04-16T09:30:41.495Z",
+      "msg": "Team removed: TR-035-FANTASTIC-FOUR",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:39 pm",
+      "fullTs": "2026-04-16T09:30:39.087Z",
+      "msg": "Team removed: TR-034",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:37 pm",
+      "fullTs": "2026-04-16T09:30:37.184Z",
+      "msg": "Team removed: TR-033-SYNTAX-SQUAD",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:35 pm",
+      "fullTs": "2026-04-16T09:30:35.526Z",
+      "msg": "Team removed: TR-030-ORCHID",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:33 pm",
+      "fullTs": "2026-04-16T09:30:33.454Z",
+      "msg": "Team removed: TR-013-TECHNOVA-1",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:31 pm",
+      "fullTs": "2026-04-16T09:30:31.580Z",
+      "msg": "Team removed: TR-004-AI-AVENGERS-1",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:29 pm",
+      "fullTs": "2026-04-16T09:30:29.608Z",
+      "msg": "Team removed: TR-002-QUANTUM-CREW",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:27 pm",
+      "fullTs": "2026-04-16T09:30:27.626Z",
+      "msg": "Team removed: TORRENT",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:25 pm",
+      "fullTs": "2026-04-16T09:30:25.686Z",
+      "msg": "Team removed: TECHVERSE",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:23 pm",
+      "fullTs": "2026-04-16T09:30:23.114Z",
+      "msg": "Team removed: QUAD-SQUAD",
+      "type": "warn"
+    },
+    {
+      "ts": "03:00:21 pm",
+      "fullTs": "2026-04-16T09:30:21.121Z",
+      "msg": "Team removed: NOT-SUS",
+      "type": "warn"
+    },
+    {
+      "ts": "02:58:43 pm",
+      "fullTs": "2026-04-16T09:28:43.747Z",
+      "msg": "Team removed: TR-96-ALTERIX",
+      "type": "warn"
+    },
+    {
+      "ts": "02:58:30 pm",
+      "fullTs": "2026-04-16T09:28:30.805Z",
+      "msg": "Team removed: GLITCH-GANG",
+      "type": "warn"
+    },
+    {
+      "ts": "02:53:58 pm",
+      "fullTs": "2026-04-16T09:23:58.428Z",
+      "msg": "Excel exported: 33 teams",
+      "type": "export"
+    },
+    {
+      "ts": "02:53:38 pm",
+      "fullTs": "2026-04-16T09:23:38.250Z",
+      "msg": "Excel exported: 33 teams",
+      "type": "export"
+    },
+    {
+      "ts": "02:53:06 pm",
+      "fullTs": "2026-04-16T09:23:06.385Z",
+      "msg": "Team removed: ZYNTAX",
+      "type": "warn"
+    },
+    {
+      "ts": "02:51:25 pm",
+      "fullTs": "2026-04-16T09:21:25.417Z",
+      "msg": "Team removed: FANTA",
+      "type": "warn"
+    },
+    {
+      "ts": "02:51:23 pm",
+      "fullTs": "2026-04-16T09:21:23.088Z",
+      "msg": "Team removed: EDS-SQUAD",
+      "type": "warn"
+    },
+    {
+      "ts": "02:51:21 pm",
+      "fullTs": "2026-04-16T09:21:21.128Z",
+      "msg": "Team removed: AUTOGENX",
+      "type": "warn"
+    },
+    {
+      "ts": "02:51:12 pm",
+      "fullTs": "2026-04-16T09:21:12.492Z",
+      "msg": "Bulk imported 0 teams",
+      "type": "add"
+    },
+    {
+      "ts": "01:55:19 pm",
+      "fullTs": "2026-04-16T08:25:19.518Z",
+      "msg": "Score updated: ZYNTAX → A:0 B: C: Total:0",
       "type": "score"
     },
     {
-      "ts": "02:57:38 pm",
-      "fullTs": "2026-04-15T09:27:38.560Z",
-      "msg": "Score updated: TEAM-002 → A:10 B:5 C: Total:15",
+      "ts": "01:55:18 pm",
+      "fullTs": "2026-04-16T08:25:18.619Z",
+      "msg": "Score updated: ZYNTAX → A:1 B: C: Total:1",
       "type": "score"
     },
     {
-      "ts": "02:57:36 pm",
-      "fullTs": "2026-04-15T09:27:36.209Z",
-      "msg": "Score updated: TEAM-002 → A:10 B: C: Total:10",
+      "ts": "01:46:09 pm",
+      "fullTs": "2026-04-16T08:16:09.035Z",
+      "msg": "Score updated: ZYNTAX → A:2 B: C: Total:2",
       "type": "score"
     },
     {
-      "ts": "02:57:34 pm",
-      "fullTs": "2026-04-15T09:27:34.442Z",
-      "msg": "Score updated: TEAM-002 → A:0 B: C: Total:0",
-      "type": "score"
+      "ts": "01:40:53 pm",
+      "fullTs": "2026-04-16T08:10:53.416Z",
+      "msg": "Excel exported: 37 teams",
+      "type": "export"
     },
     {
-      "ts": "02:57:32 pm",
-      "fullTs": "2026-04-15T09:27:32.872Z",
-      "msg": "Score updated: TEAM-002 → A:10 B: C: Total:10",
-      "type": "score"
+      "ts": "01:40:46 pm",
+      "fullTs": "2026-04-16T08:10:46.378Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
     },
     {
-      "ts": "02:57:31 pm",
-      "fullTs": "2026-04-15T09:27:31.609Z",
-      "msg": "Score updated: TEAM-002 → A:0 B: C: Total:0",
-      "type": "score"
+      "ts": "01:40:39 pm",
+      "fullTs": "2026-04-16T08:10:39.803Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
     },
     {
-      "ts": "02:57:30 pm",
-      "fullTs": "2026-04-15T09:27:30.740Z",
-      "msg": "Score updated: TEAM-001 → A:10 B:10 C:40 Total:60",
-      "type": "score"
+      "ts": "01:40:36 pm",
+      "fullTs": "2026-04-16T08:10:36.755Z",
+      "msg": "Excel exported: 37 teams",
+      "type": "export"
     },
     {
-      "ts": "02:57:27 pm",
-      "fullTs": "2026-04-15T09:27:27.426Z",
-      "msg": "Score updated: TEAM-001 → A:10 B:10 C: Total:20",
-      "type": "score"
+      "ts": "01:23:07 pm",
+      "fullTs": "2026-04-16T07:53:07.251Z",
+      "msg": "Excel exported: 37 teams",
+      "type": "export"
     },
     {
-      "ts": "02:57:23 pm",
-      "fullTs": "2026-04-15T09:27:23.649Z",
-      "msg": "Score updated: TEAM-001 → A:10 B:0 C: Total:10",
-      "type": "score"
+      "ts": "01:20:11 pm",
+      "fullTs": "2026-04-16T07:50:11.399Z",
+      "msg": "Bulk sync complete for 37 teams",
+      "type": "sync"
     },
     {
-      "ts": "02:57:22 pm",
-      "fullTs": "2026-04-15T09:27:22.544Z",
-      "msg": "Score updated: TEAM-001 → A:10 B:0 C: Total:10",
-      "type": "score"
+      "ts": "01:19:23 pm",
+      "fullTs": "2026-04-16T07:49:23.004Z",
+      "msg": "Starting bulk sync for 37 teams",
+      "type": "sync"
     },
     {
-      "ts": "02:57:21 pm",
-      "fullTs": "2026-04-15T09:27:21.425Z",
-      "msg": "Score updated: TEAM-001 → A:10 B: C: Total:10",
-      "type": "score"
+      "ts": "01:19:18 pm",
+      "fullTs": "2026-04-16T07:49:18.992Z",
+      "msg": "Auto-imported 4 teams from Classroom",
+      "type": "add"
     },
     {
-      "ts": "02:20:48 pm",
-      "fullTs": "2026-04-15T08:50:48.319Z",
-      "msg": "Server started on port 3001",
-      "type": "system"
+      "ts": "01:19:12 pm",
+      "fullTs": "2026-04-16T07:49:12.740Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
     },
     {
-      "ts": "11:59:02 am",
-      "fullTs": "2026-04-15T06:29:02.470Z",
-      "msg": "Server started on port 3001",
-      "type": "system"
+      "ts": "01:07:52 pm",
+      "fullTs": "2026-04-16T07:37:52.362Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
     },
     {
-      "ts": "10:58:05 am",
-      "fullTs": "2026-04-15T05:28:05.156Z",
+      "ts": "01:07:46 pm",
+      "fullTs": "2026-04-16T07:37:46.954Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "01:07:08 pm",
+      "fullTs": "2026-04-16T07:37:08.568Z",
       "msg": "Auto-imported 1 teams from Classroom",
       "type": "add"
     },
     {
-      "ts": "10:58:04 am",
-      "fullTs": "2026-04-15T05:28:04.438Z",
+      "ts": "01:07:05 pm",
+      "fullTs": "2026-04-16T07:37:05.761Z",
+      "msg": "Bulk sync complete for 32 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "01:07:03 pm",
+      "fullTs": "2026-04-16T07:37:03.922Z",
       "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
       "type": "github"
     },
     {
-      "ts": "10:58:02 am",
-      "fullTs": "2026-04-15T05:28:02.436Z",
+      "ts": "01:06:54 pm",
+      "fullTs": "2026-04-16T07:36:54.861Z",
+      "msg": "Bulk sync complete for 32 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "01:06:16 pm",
+      "fullTs": "2026-04-16T07:36:16.263Z",
+      "msg": "Starting bulk sync for 32 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "01:06:02 pm",
+      "fullTs": "2026-04-16T07:36:02.121Z",
+      "msg": "Starting bulk sync for 32 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "01:05:58 pm",
+      "fullTs": "2026-04-16T07:35:58.956Z",
+      "msg": "Auto-imported 3 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "01:05:53 pm",
+      "fullTs": "2026-04-16T07:35:53.801Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "01:04:36 pm",
+      "fullTs": "2026-04-16T07:34:36.273Z",
+      "msg": "Auto-imported 29 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "01:04:31 pm",
+      "fullTs": "2026-04-16T07:34:31.597Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:51:59 pm",
+      "fullTs": "2026-04-16T07:21:59.235Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:51:58 pm",
+      "fullTs": "2026-04-16T07:21:58.852Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:51:52 pm",
+      "fullTs": "2026-04-16T07:21:52.504Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:51:52 pm",
+      "fullTs": "2026-04-16T07:21:52.023Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:51:50 pm",
+      "fullTs": "2026-04-16T07:21:50.350Z",
+      "msg": "Team removed: TEST",
+      "type": "warn"
+    },
+    {
+      "ts": "12:51:13 pm",
+      "fullTs": "2026-04-16T07:21:13.681Z",
+      "msg": "Auto-imported 1 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:51:13 pm",
+      "fullTs": "2026-04-16T07:21:13.026Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:51:09 pm",
+      "fullTs": "2026-04-16T07:21:09.533Z",
+      "msg": "Team removed: TEST",
+      "type": "warn"
+    },
+    {
+      "ts": "12:50:27 pm",
+      "fullTs": "2026-04-16T07:20:27.804Z",
+      "msg": "Auto-imported 1 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:50:27 pm",
+      "fullTs": "2026-04-16T07:20:27.197Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:50:25 pm",
+      "fullTs": "2026-04-16T07:20:25.594Z",
+      "msg": "Team removed: TEST",
+      "type": "warn"
+    },
+    {
+      "ts": "12:50:15 pm",
+      "fullTs": "2026-04-16T07:20:15.548Z",
+      "msg": "Auto-imported 1 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:50:14 pm",
+      "fullTs": "2026-04-16T07:20:14.893Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:39:26 pm",
+      "fullTs": "2026-04-16T07:09:26.100Z",
+      "msg": "Team removed: TEST",
+      "type": "warn"
+    },
+    {
+      "ts": "12:38:32 pm",
+      "fullTs": "2026-04-16T07:08:32.141Z",
+      "msg": "Bulk sync complete for 1 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "12:38:30 pm",
+      "fullTs": "2026-04-16T07:08:30.780Z",
+      "msg": "Starting bulk sync for 1 teams",
+      "type": "sync"
+    },
+    {
+      "ts": "12:38:23 pm",
+      "fullTs": "2026-04-16T07:08:23.917Z",
+      "msg": "Auto-imported 1 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:38:23 pm",
+      "fullTs": "2026-04-16T07:08:23.297Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "12:15:03 pm",
+      "fullTs": "2026-04-16T06:45:03.046Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "12:15:02 pm",
+      "fullTs": "2026-04-16T06:45:02.635Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "11:52:25 am",
+      "fullTs": "2026-04-16T06:22:25.715Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "11:52:25 am",
+      "fullTs": "2026-04-16T06:22:25.335Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "11:47:21 am",
+      "fullTs": "2026-04-16T06:17:21.003Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "11:47:20 am",
+      "fullTs": "2026-04-16T06:17:20.640Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "10:29:47 am",
+      "fullTs": "2026-04-16T04:59:47.704Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "10:29:47 am",
+      "fullTs": "2026-04-16T04:59:47.317Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "10:29:45 am",
+      "fullTs": "2026-04-16T04:59:45.508Z",
       "msg": "Team removed: TEAM-001",
       "type": "warn"
     },
     {
-      "ts": "10:57:24 am",
-      "fullTs": "2026-04-15T05:27:24.227Z",
-      "msg": "Excel exported: 2 teams",
-      "type": "export"
-    },
-    {
-      "ts": "10:55:52 am",
-      "fullTs": "2026-04-15T05:25:52.519Z",
-      "msg": "Bulk sync complete for 2 teams",
+      "ts": "09:41:56 am",
+      "fullTs": "2026-04-16T04:11:56.127Z",
+      "msg": "Bulk sync complete for 1 teams",
       "type": "sync"
     },
     {
-      "ts": "10:55:49 am",
-      "fullTs": "2026-04-15T05:25:49.683Z",
-      "msg": "Starting bulk sync for 2 teams",
+      "ts": "09:41:54 am",
+      "fullTs": "2026-04-16T04:11:54.855Z",
+      "msg": "Starting bulk sync for 1 teams",
       "type": "sync"
     },
     {
-      "ts": "10:55:32 am",
-      "fullTs": "2026-04-15T05:25:32.583Z",
-      "msg": "Phase changed to: Phase 2",
-      "type": "system"
-    },
-    {
-      "ts": "10:49:56 am",
-      "fullTs": "2026-04-15T05:19:56.230Z",
-      "msg": "Phase changed to: Phase 1",
-      "type": "system"
-    },
-    {
-      "ts": "10:49:50 am",
-      "fullTs": "2026-04-15T05:19:50.955Z",
-      "msg": "Phase changed to: Inauguration",
-      "type": "system"
-    },
-    {
-      "ts": "10:47:36 am",
-      "fullTs": "2026-04-15T05:17:36.774Z",
-      "msg": "Server started on port 3001",
-      "type": "system"
-    },
-    {
-      "ts": "02:51:46 pm",
-      "fullTs": "2026-04-14T09:21:46.657Z",
-      "msg": "Excel exported: 2 teams",
-      "type": "export"
-    },
-    {
-      "ts": "02:49:45 pm",
-      "fullTs": "2026-04-14T09:19:45.532Z",
-      "msg": "Bulk sync complete for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "02:49:41 pm",
-      "fullTs": "2026-04-14T09:19:41.851Z",
-      "msg": "Starting bulk sync for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "02:47:47 pm",
-      "fullTs": "2026-04-14T09:17:47.450Z",
-      "msg": "Server started on port 3001",
-      "type": "system"
-    },
-    {
-      "ts": "02:47:09 pm",
-      "fullTs": "2026-04-14T09:17:09.957Z",
-      "msg": "Server started on port 3001",
-      "type": "system"
-    },
-    {
-      "ts": "02:43:37 pm",
-      "fullTs": "2026-04-14T09:13:37.600Z",
-      "msg": "Bulk sync complete for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "02:43:34 pm",
-      "fullTs": "2026-04-14T09:13:34.285Z",
-      "msg": "Starting bulk sync for 2 teams",
-      "type": "sync"
-    },
-    {
-      "ts": "02:43:01 pm",
-      "fullTs": "2026-04-14T09:13:01.632Z",
-      "msg": "Auto-imported 2 teams from Classroom",
+      "ts": "09:41:48 am",
+      "fullTs": "2026-04-16T04:11:48.557Z",
+      "msg": "Auto-imported 1 teams from Classroom",
       "type": "add"
     },
     {
-      "ts": "02:43:00 pm",
-      "fullTs": "2026-04-14T09:13:00.167Z",
+      "ts": "09:41:48 am",
+      "fullTs": "2026-04-16T04:11:48.068Z",
       "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
       "type": "github"
     },
     {
-      "ts": "02:42:53 pm",
-      "fullTs": "2026-04-14T09:12:53.203Z",
-      "msg": "Phase changed to: Phase 1",
+      "ts": "09:40:10 am",
+      "fullTs": "2026-04-16T04:10:10.443Z",
+      "msg": "Auto-imported 0 teams from Classroom",
+      "type": "add"
+    },
+    {
+      "ts": "09:40:10 am",
+      "fullTs": "2026-04-16T04:10:10.059Z",
+      "msg": "Fetching teams for assignment: TENSOR-26 Hackathon",
+      "type": "github"
+    },
+    {
+      "ts": "09:38:55 am",
+      "fullTs": "2026-04-16T04:08:55.974Z",
+      "msg": "Server started on port 3001",
       "type": "system"
     },
     {
-      "ts": "02:42:22 pm",
-      "fullTs": "2026-04-14T09:12:22.238Z",
-      "msg": "Server started on port 3001",
+      "ts": "09:30:00 am",
+      "fullTs": "2026-04-16T04:00:00.000Z",
+      "msg": "Production Ready: System Reset for Event",
       "type": "system"
     }
   ],
-  "activePhase": "Phase 1",
-  "phaseStartTime": "2026-04-15T11:13:19.919Z",
+  "activePhase": "Inauguration",
+  "phaseStartTime": "2026-04-16T04:00:00.000Z",
   "phaseDurations": {
     "Inauguration": 60,
     "Phase 1": 180,
-    "Lunch": 1,
+    "Lunch": 60,
     "Phase 2": 300,
     "Checkpoint 1": 90,
     "Phase 3": 420,

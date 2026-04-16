@@ -78,6 +78,56 @@ global.loadData = () => {
 // Load on start
 global.loadData();
 
+// ─── Auto-repair corrupted team data ─────────────────────────────────────────
+// Fixes entries where the ID or repoName contains full GitHub URLs instead of just owner/repo slug.
+function parseGitHubUrlInternal(url) {
+  if (!url) return { owner: null, repo: null };
+  const clean = url.trim()
+    .replace(/https?:\/\/(www\.)?github\.com\//ig, '')
+    .replace(/\.git$/i, '')
+    .replace(/git@github\.com[:/]/i, '');
+  // Remove any further "http" leftover (double-URL corruption like TENSOR-26/https://github.com/...)
+  const parts = clean.split('/').filter(p => p && !p.startsWith('http') && p !== 'github.com');
+  if (parts.length >= 2) return { owner: parts[parts.length - 2], repo: parts[parts.length - 1] };
+  if (parts.length === 1) return { owner: null, repo: parts[0] };
+  return { owner: null, repo: null };
+}
+
+function migrateData() {
+  const store = global.teamsStore;
+  const badKeys = Object.keys(store).filter(k => k.startsWith('http') || k.includes('github.com'));
+  if (badKeys.length === 0) return;
+
+  console.log(`🔧 Auto-repairing ${badKeys.length} corrupted team entries...`);
+  badKeys.forEach(badKey => {
+    const team = store[badKey];
+    // Try to extract owner/repo from repoUrl or repoName or the key itself
+    const { owner, repo } = parseGitHubUrlInternal(team.repoUrl || team.repoName || badKey);
+    if (!repo) { console.warn(`  ⚠ Could not repair: ${badKey}`); return; }
+
+    const newId = repo;
+    const finalOwner = owner || process.env.GITHUB_ORG || 'TENSOR-26';
+    const cleanEntry = {
+      ...team,
+      id: newId,
+      repoOwner: finalOwner,
+      repoName: repo,
+      repoUrl: `https://github.com/${finalOwner}/${repo}`,
+      compareUrl: team.compareUrl || '',
+    };
+    delete store[badKey];
+    store[newId] = cleanEntry;
+    console.log(`  ✓ Fixed: "${badKey}" → "${newId}" (owner: ${finalOwner})`);
+  });
+
+  global.teamsStore = store;
+  global.saveData();
+  console.log('✅ Data migration complete.');
+}
+
+migrateData();
+
+
 function addLog(msg, type = 'info') {
   global.eventLog.unshift({
     ts: new Date().toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }),

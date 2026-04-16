@@ -2,12 +2,27 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 
+const { GITHUB_TOKEN, GITHUB_ORG, PHASE1_COMMIT_MESSAGE } = process.env;
+const phase1Msg = PHASE1_COMMIT_MESSAGE || 'Phase 1 baseline';
+
+function parseGitHubUrl(url) {
+  if (!url) return { owner: null, repo: null };
+  const clean = url.trim()
+    .replace(/https?:\/\/(www\.)?github\.com\//i, '')
+    .replace(/\.git$/i, '')
+    .replace(/git@github\.com[:/]/i, '');
+  const parts = clean.split('/').filter(Boolean);
+  if (parts.length >= 2) {
+    return { owner: parts[parts.length - 2], repo: parts[parts.length - 1] };
+  }
+  return { owner: null, repo: parts[0] || null };
+}
+
 const GH = () => axios.create({
   baseURL: 'https://api.github.com',
   headers: {
-    Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-    Accept: 'application/vnd.github+json',
-    'X-GitHub-Api-Version': '2022-11-28'
+    'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+    'Accept': 'application/vnd.github.v3+json'
   }
 });
 
@@ -79,13 +94,19 @@ router.get('/repo/:repoName/commits', async (req, res) => {
 router.post('/sync-team', async (req, res) => {
   try {
     const { repoName } = req.body;
-    const org = process.env.GITHUB_ORG;
-    const phase1Msg = process.env.PHASE1_COMMIT_MESSAGE || 'feat: Initial AI Generation';
+    const team = global.teamsStore[repoName];
+    if (!team) return res.status(404).json({ error: 'Team not found' });
 
-    // Get commits
-    const { data: commits } = await GH().get(`/repos/${org}/${repoName}/commits`, {
-      params: { per_page: 100 }
-    });
+    const { owner: pOwner, repo: pRepo } = parseGitHubUrl(team.repoUrl || team.repoName || team.id);
+    const owner = pOwner || team.repoOwner || process.env.GITHUB_ORG;
+    const repo = pRepo || team.repoName || repoName;
+
+    // Get repository details and commits
+    const [{ data: repoData }, { data: commits }] = await Promise.all([
+      GH().get(`/repos/${owner}/${repo}`),
+      GH().get(`/repos/${owner}/${repo}/commits`, { params: { per_page: 100 } })
+    ]);
+    const repoCreatedAt = repoData.created_at;
 
     const allCommits = commits.map(c => ({
       sha: c.sha,
@@ -96,34 +117,32 @@ router.post('/sync-team', async (req, res) => {
       url: c.html_url
     }));
 
-    // Find Phase 1 marker or use oldest commit as base
-    let phase1Commit = allCommits.find(c =>
+    // Find Phase 1 marker (newest-to-oldest search)
+    let phase1Index = allCommits.findIndex(c =>
       c.message.toLowerCase().includes(phase1Msg.toLowerCase())
     );
     
-    // Real-Time P1 Logic: If no explicit marker, use the LATEST commit as the milestone
-    if (!phase1Commit && allCommits.length > 0) {
-      phase1Commit = allCommits[0]; // Most recent commit
+    // If no marker, use the OLDEST commit as the milestone (so View Diff shows everything)
+    if (phase1Index === -1 && allCommits.length > 0) {
+      phase1Index = allCommits.length - 1; // Oldest commit
     }
 
-    // Count commits after Phase 1
-    let commitsAfterPhase1 = 0;
-    let phase1Hash = null;
-    let phase1Confirmed = false;
-    
-    // Absolute Real-Time Logic: Always use the LATEST commit as the milestone to ensure freshest data.
-    // This bypasses any markers that might be stuck in template repo history.
-    if (allCommits.length > 0) {
-      phase1Commit = allCommits[0];
-      phase1Hash = phase1Commit.shortSha;
-      commitsAfterPhase1 = 0; // In real-time mode, current work IS the milestone
-      phase1Confirmed = true;
-    }
+    let phase1Commit = phase1Index !== -1 ? allCommits[phase1Index] : null;
+    let commitsAfterPhase1 = phase1Index !== -1 ? phase1Index : 0;
+    let phase1Hash = phase1Commit?.shortSha || null;
+    let phase1Confirmed = !!phase1Commit;
+
+    // Correction Logic: If the commit date is older than repo creation (template), use repo creation time.
+    const finalPhase1Time = phase1Commit ? (
+      new Date(phase1Commit.date) < new Date(repoCreatedAt) 
+        ? repoCreatedAt 
+        : phase1Commit.date
+    ) : null;
 
     // Get README for live URL
     let liveUrl = '';
     try {
-      const { data: readme } = await GH().get(`/repos/${org}/${repoName}/readme`);
+      const { data: readme } = await GH().get(`/repos/${owner}/${repo}/readme`);
       const content = Buffer.from(readme.content, 'base64').toString('utf-8');
       const urlMatch = content.match(/https?:\/\/[^\s)"\]]+\.(vercel\.app|streamlit\.app|huggingface\.co|onrender\.com|hf\.space)[^\s)"\]]*/);
       if (urlMatch) liveUrl = urlMatch[0];
@@ -132,18 +151,18 @@ router.post('/sync-team', async (req, res) => {
     // Check branch protection
     let branchProtected = false;
     try {
-      const { data: branch } = await GH().get(`/repos/${org}/${repoName}/branches/main`);
+      const { data: branch } = await GH().get(`/repos/${owner}/${repo}/branches/main`);
       branchProtected = branch.protected || false;
     } catch (_) {}
 
     const syncData = {
       repoName,
-      repoUrl: `https://github.com/${org}/${repoName}`,
-      compareUrl: phase1Hash ? `https://github.com/${org}/${repoName}/compare/${phase1Hash}...main` : '',
+      repoUrl: `https://github.com/${owner}/${repo}`,
+      compareUrl: phase1Hash ? `https://github.com/${owner}/${repo}/compare/${phase1Hash}...main` : '',
       totalCommits: allCommits.length,
       phase1Commit: phase1Confirmed,
       phase1Hash,
-      phase1Time: phase1Commit?.date || null,
+      phase1Time: finalPhase1Time,
       commitsAfterPhase1,
       liveUrl,
       branchProtected,
@@ -178,45 +197,64 @@ router.post('/sync-all', async (req, res) => {
   (async () => {
     global.addLog(`Starting bulk sync for ${keys.length} teams`, 'sync');
     for (const repoName of keys) {
+      // Declare owner/repo OUTSIDE try so they're accessible in catch
+      let owner = GITHUB_ORG;
+      let repo = repoName;
       try {
         const team = global.teamsStore[repoName];
-        if (!team.repoName) continue;
-        // reuse sync logic
-        const org = process.env.GITHUB_ORG;
-        const phase1Msg = process.env.PHASE1_COMMIT_MESSAGE || 'feat: Initial AI Generation';
-        const { data: commits } = await GH().get(`/repos/${org}/${team.repoName}/commits`, { params: { per_page: 100 } });
+        const { owner: pOwner, repo: pRepo } = parseGitHubUrl(team.repoUrl || team.repoName || team.id);
+        owner = pOwner || team.repoOwner || GITHUB_ORG;
+        repo = pRepo || team.repoName || team.id;
+
+        const [{ data: repoData }, { data: commits }] = await Promise.all([
+          GH().get(`/repos/${owner}/${repo}`),
+          GH().get(`/repos/${owner}/${repo}/commits`, { params: { per_page: 100 } })
+        ]);
+        const repoCreatedAt = repoData.created_at;
+
         const allCommits = commits.map(c => ({ sha: c.sha, shortSha: c.sha.substring(0, 7), message: c.commit.message, author: c.commit.author.name, date: c.commit.author.date, url: c.html_url }));
-        let phase1Commit = allCommits[0] || null;
-        const phase1Confirmed = allCommits.length > 0;
-        const phase1Index = 0;
         
+        // Use identical logic to sync-team
+        let pIndex = allCommits.findIndex(c => c.message.toLowerCase().includes(phase1Msg.toLowerCase()));
+        if (pIndex === -1 && allCommits.length > 0) pIndex = allCommits.length - 1; // Oldest
+
+        const pCommit = pIndex !== -1 ? allCommits[pIndex] : null;
+        const pTime = pCommit ? (new Date(pCommit.date) < new Date(repoCreatedAt) ? repoCreatedAt : pCommit.date) : null;
+
         let liveUrl = team.liveUrl || '';
         try {
-          const { data: readme } = await GH().get(`/repos/${org}/${team.repoName}/readme`);
+          const { data: readme } = await GH().get(`/repos/${owner}/${repo}/readme`);
           const content = Buffer.from(readme.content, 'base64').toString('utf-8');
-          const urlMatch = content.match(/https?:\/\/[^\s)"\]]+\.(vercel\.app|streamlit\.app|huggingface\.co|onrender\.com|hf\.space)[^\s)"\]]*/);
+          const urlMatch = content.match(/https?:\/\/[^\s)"]+\.(vercel\.app|streamlit\.app|huggingface\.co|onrender\.com|hf\.space)[^\s)"]*/);
           if (urlMatch) liveUrl = urlMatch[0];
         } catch (_) {}
         global.teamsStore[repoName] = {
           ...global.teamsStore[repoName],
-          phase1Commit: !!phase1Confirmed,
-          phase1Hash: phase1Commit?.shortSha || null,
-          phase1Time: phase1Commit?.date || null,
-          commitsAfterPhase1: phase1Index > 0 ? phase1Index : 0,
+          repoOwner: owner,
+          repoName: repo,
+          phase1Commit: !!pCommit,
+          phase1Hash: pCommit?.shortSha || null,
+          phase1Time: pTime,
+          commitsAfterPhase1: pIndex > 0 ? pIndex : 0,
           totalCommits: allCommits.length,
           liveUrl,
-          compareUrl: phase1Commit ? `https://github.com/${org}/${team.repoName}/compare/${phase1Commit.shortSha}...main` : '',
+          compareUrl: pCommit ? `https://github.com/${owner}/${repo}/compare/${pCommit.shortSha}...main` : '',
           lastCommit: allCommits[0] || null,
           syncedAt: new Date().toISOString()
         };
+        global.addLog(`Synced: ${team.name || repo} | Commits: ${allCommits.length}`, 'sync');
         await new Promise(r => setTimeout(r, 300)); // rate limit
       } catch (e) {
-        global.addLog(`Sync failed for ${repoName}: ${e.message}`, 'error');
+        const errorDetail = e.response?.data?.message || e.message;
+        global.addLog(`Sync failed for ${repoName} [${owner}/${repo}]: ${errorDetail}`, 'error');
       }
     }
     global.saveData();
     global.addLog(`Bulk sync complete for ${keys.length} teams`, 'sync');
-  })();
+  })().catch(err => {
+    console.error('CRITICAL sync-all error:', err);
+    global.addLog(`Sync crashed: ${err.message}`, 'error');
+  });
 });
 
 // GET /api/github/classroom/assignments - list classroom assignments

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import axios from 'axios';
+import * as XLSX from 'xlsx';
 import './App.css';
 
 const API = axios.create({ 
@@ -296,11 +297,112 @@ export default function App() {
     } catch (e) { alert(e.response?.data?.error || e.message); }
   };
 
+  const fileInputRef = useRef(null);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      const bstr = evt.target.result;
+      let rows = [];
+
+      if (file.name.endsWith('.csv')) {
+        // Parse CSV properly handling quoted fields with commas inside
+        const parseCSVLine = (line) => {
+          const result = []; let current = ''; let inQuotes = false;
+          for (let i = 0; i < line.length; i++) {
+            if (line[i] === '"') { inQuotes = !inQuotes; }
+            else if (line[i] === ',' && !inQuotes) { result.push(current.trim()); current = ''; }
+            else { current += line[i]; }
+          }
+          result.push(current.trim());
+          return result;
+        };
+        rows = bstr.trim().split('\n').map(parseCSVLine);
+      } else {
+        const workbook = XLSX.read(bstr, { type: 'binary' });
+        const ws = workbook.Sheets[workbook.SheetNames[0]];
+        rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
+      }
+
+      // Find header row and map columns by name
+      if (rows.length === 0) return;
+      const headerRow = rows[0].map(h => String(h).toLowerCase().trim());
+
+      // Flexible column detection by keywords
+      const findCol = (keywords) => {
+        const idx = headerRow.findIndex(h => keywords.some(kw => h.includes(kw)));
+        return idx;
+      };
+
+      const colName    = findCol(['team name', 'team_name', 'name']);
+      const colTrack   = findCol(['track']);
+      const colMembers = findCol(['member']);
+      const colGithub  = findCol(['github', 'git', 'repo', 'link', 'url']);
+      const colLive    = findCol(['live', 'deploy', 'hosted', 'app']);
+
+      // If no header found, fall back to raw CSV text display
+      if (colName === -1) {
+        // No recognized header — just show raw text for manual entry
+        setBulkCsv(rows.slice(1).map(r => r.join(',')).join('\n'));
+        setImportMsg(`Loaded file: ${file.name} (manual mapping mode)`);
+        return;
+      }
+
+      // Convert rows (skip header) to standard format
+      const dataRows = rows.slice(1);
+      const teams = dataRows
+        .filter(r => r.some(cell => String(cell).trim()))
+        .map(r => ({
+          name:    colName    >= 0 ? String(r[colName] || '').trim()   : '',
+          track:   colTrack   >= 0 ? String(r[colTrack] || '').trim()  : 'Industry',
+          members: colMembers >= 0 ? String(r[colMembers] || '').trim(): '',
+          repoName: colGithub >= 0 ? String(r[colGithub] || '').trim() : '',
+          liveUrl:  colLive   >= 0 ? String(r[colLive] || '').trim()   : '',
+        }))
+        .filter(t => t.name && t.repoName);
+
+      // Show summary in textarea for user to review before importing
+      const preview = teams.map(t =>
+        `${t.name}, ${t.track || 'Industry'}, ${t.members}, ${t.repoName}, ${t.liveUrl}`
+      ).join('\n');
+
+      setBulkCsv(preview);
+      setImportMsg(`✅ Loaded ${teams.length} teams from: ${file.name}`);
+    };
+
+    if (file.name.endsWith('.csv')) {
+      reader.readAsText(file);
+    } else {
+      reader.readAsBinaryString(file);
+    }
+  };
+
   const bulkImport = async () => {
     const lines = bulkCsv.trim().split('\n').filter(l => l.trim());
     const teamsList = lines.map(line => {
       const p = line.split(',').map(s => s.trim());
-      return { name: p[0], track: p[1] || 'Industry', members: [p[2], p[3], p[4], p[5]].filter(Boolean).join(', '), repoName: p[6] || '', liveUrl: p[7] || '' };
+      
+      // Smart detection: Find which column has the GitHub Link
+      let detectedRepo = '';
+      let membersStr = '';
+      [p[2], p[3], p[4]].forEach(col => {
+        if (col && (col.includes('github.com') || col.includes('git@github'))) {
+          detectedRepo = col;
+        } else if (col && !membersStr && !col.includes('http')) {
+          membersStr = col;
+        }
+      });
+
+      return { 
+        name: p[0], 
+        track: p[1] || 'Industry', 
+        members: membersStr || p[2] || '', 
+        repoName: detectedRepo || p[3] || '', 
+        liveUrl: p[4] || '' 
+      };
     }).filter(t => t.name);
     try {
       const { data } = await API.post('/teams/bulk', { teams: teamsList });
@@ -400,6 +502,7 @@ export default function App() {
           {!isJuryMode && (
             <>
               <button className="btn" onClick={() => setShowAddModal(true)}>+ Add</button>
+              <button className="btn" onClick={() => setShowBulkModal(true)}>Bulk Import</button>
               <button className="btn" onClick={importFromClassroom} disabled={importingClassroom}>
                 {importingClassroom ? '...' : 'Pull Classroom'}
               </button>
@@ -843,13 +946,17 @@ PHASE1_COMMIT_MESSAGE=feat: Initial AI Generation`}</pre>
               <h2>Bulk import teams</h2>
               <button className="modal-close" onClick={() => setShowBulkModal(false)}>×</button>
             </div>
-            <p className="form-hint">One team per line: <code>TeamName, Track, Member1, Member2, Member3, Member4, RepoName, LiveURL</code></p>
+            <p className="form-hint">Format (one per line): <code>Team Name, Track, Members (A;B;C), GitHub Link, Live URL</code></p>
             <textarea className="bulk-textarea" value={bulkCsv} onChange={e => setBulkCsv(e.target.value)}
-              placeholder={`Team NeuralForge, Industry, Ravi, Priya, Karthik, Meena, tensor26-neuralforge, https://neuralforge.vercel.app\nTeam BioSense, Societal, Arjun, Divya, Sundar,, tensor26-biosense, https://biosense.streamlit.app`} />
+              placeholder={`Team Alpha, Industry, Ravi; Priya; Karthik, https://github.com/ravi/ext-repo, https://alpha.vercel.app\nTeam Beta, Student, Sam; Jai, https://github.com/sam/beta-project,`} />
             {importMsg && <p className="import-msg">{importMsg}</p>}
             <div className="modal-footer">
               <button className="btn" onClick={() => setShowBulkModal(false)}>Cancel</button>
-              <button className="btn btn-primary" onClick={bulkImport}>Import teams</button>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <button className="btn" onClick={() => fileInputRef.current.click()}>Upload File</button>
+                <input type="file" ref={fileInputRef} hidden accept=".csv,.xlsx,.xls" onChange={handleFileChange} />
+                <button className="btn btn-primary" onClick={bulkImport}>Import teams</button>
+              </div>
             </div>
           </div>
         </div>
